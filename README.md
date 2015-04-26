@@ -1,5 +1,3 @@
-== README
-
 #A Ruby on Rails SaaS Project Application
 
 ###Subscription-based web application 
