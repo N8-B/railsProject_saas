@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-3 text-center avatar">
-    <%= image_tag @user.profile.avatar.url, class: 'user-show-avatar' %>
+    <%= image_tag @user.profile.avatar.url, class: 'ss' %>
   </div>
   <div class="col-md-6 profile">
     <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
@@ -9,12 +9,12 @@
       <h3>Description</h3>
       <%= @user.profile.description %>
     </div>
-    <% if current_user.plan_id == 2 || (current_user == current_user) %>
-    <div class="well contact-info">
-      <h3>Contact Info</h3>
-      <h5><%= @user.profile.phone_number %><h5>
-      <h5><%= @user.profile.contact_email %><h5>
-    </div>
+    <% if current_user.plan_id == 2 && current_user == current_user %>
+      <div class="well contact-info">
+        <h3>Contact Info</h3>
+        <h5><%= @user.profile.phone_number %><h5>
+        <h5><%= @user.profile.contact_email %><h5>
+      </div>
     <% end %>
   </div>
  </div>
